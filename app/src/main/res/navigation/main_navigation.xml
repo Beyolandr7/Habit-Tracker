@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.aenempeh.habittracker.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/actionHabitListFragment"
+            app:destination="@id/habitListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/habitListFragment"
+        android:name="com.aenempeh.habittracker.view.HabitListFragment"
+        android:label="fragment_habit_list"
+        tools:layout="@layout/fragment_habit_list" >
+        <action
+            android:id="@+id/actionHabitDetailFragment"
+            app:destination="@id/habitDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/habitDetailFragment"
+        android:name="com.aenempeh.habittracker.view.HabitDetailFragment"
+        android:label="fragment_habit_detail"
+        tools:layout="@layout/fragment_habit_detail" />
+</navigation>
