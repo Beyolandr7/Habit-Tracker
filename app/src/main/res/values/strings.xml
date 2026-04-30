@@ -11,4 +11,10 @@
     <string name="login_failed">"Login failed"</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="habit_icons">
+        <item>book</item>
+        <item>meditation</item>
+        <item>water</item>
+        <item>health</item>
+    </string-array>
 </resources>
