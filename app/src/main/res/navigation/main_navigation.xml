@@ -20,12 +20,12 @@
         android:label="fragment_habit_list"
         tools:layout="@layout/fragment_habit_list" >
         <action
-            android:id="@+id/actionHabitDetailFragment"
-            app:destination="@id/habitDetailFragment" />
+            android:id="@+id/action_habitListFragment_to_habitCreateFragment"
+            app:destination="@id/habitCreateFragment" />
     </fragment>
     <fragment
-        android:id="@+id/habitDetailFragment"
-        android:name="com.aenempeh.habittracker.view.HabitDetailFragment"
-        android:label="fragment_habit_detail"
-        tools:layout="@layout/fragment_habit_detail" />
+        android:id="@+id/habitCreateFragment"
+        android:name="com.aenempeh.habittracker.view.HabitCreateFragment"
+        android:label="fragment_habit_create"
+        tools:layout="@layout/fragment_habit_create" />
 </navigation>
