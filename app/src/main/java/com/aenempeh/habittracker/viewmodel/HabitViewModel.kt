@@ -16,6 +16,8 @@ class HabitViewModel(application: Application) : AndroidViewModel(application) {
 
     val habitsLD = MutableLiveData<List<Habit>>()
 
+    val isSuccessLD = MutableLiveData<Boolean>()
+
     fun createHabit(name: String, desc: String, goal: Int, unit: String, icon: String) {
         try {
             val newHabit = Habit(
@@ -34,6 +36,8 @@ class HabitViewModel(application: Application) : AndroidViewModel(application) {
             habitsLD.value = ArrayList(currentList)
 
             Log.d("HabitViewModel", "Habit added successfully: $newHabit")
+
+            isSuccessLD.value = true
 
         } catch (e: Exception) {
             Log.e("HabitViewModel", "Failed to add habit", e)
