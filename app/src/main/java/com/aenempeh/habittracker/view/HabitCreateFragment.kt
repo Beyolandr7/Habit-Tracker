@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.aenempeh.habittracker.R
 import com.aenempeh.habittracker.databinding.ActivityMainBinding
 import com.aenempeh.habittracker.databinding.FragmentHabitCreateBinding
@@ -37,6 +38,11 @@ class HabitCreateFragment : Fragment() {
             val icon = binding.pickIcon.selectedItem.toString()
 
             viewModel.createHabit(name, desc, goal, unit, icon)
+        }
+
+        // Tombol back di toolbar
+        binding.topbarCreate.setNavigationOnClickListener {
+            Navigation.findNavController(it).popBackStack()
         }
     }
 }
